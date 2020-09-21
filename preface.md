@@ -25,8 +25,6 @@
 
 阅读本书后，你能很好地决定哪种技术适合哪种用途，并了解如何将工具组合起来，为一个良好应用架构奠定基础。本书并不足以使你从头开始构建自己的数据库存储引擎，不过幸运的是这基本上很少有必要。你将获得对系统底层发生事情的敏锐直觉，这样你就有能力推理它们的行为，做出优秀的设计决策，并追踪任何可能出现的问题。
 
-
-
 ## 本书的目标读者
 
 如果你开发的应用具有用于存储或处理数据的某种服务器/后端系统，而且使用网络（例如，Web应用，移动应用或连接到互联网的传感器），那么本书就是为你准备的。
@@ -44,13 +42,11 @@
 
 有时在讨论可扩展的数据系统时，人们会说：“你又不在谷歌或亚马逊，别操心可扩展性了，直接上关系型数据库”。这个陈述有一定的道理：为了不必要的扩展性而设计程序，不仅会浪费不必要的精力，并且可能会把你锁死在一个不灵活的设计中。实际上这是一种“过早优化”的形式。不过，选择合适的工具确实很重要，而不同的技术各有优缺点。我们将看到，关系数据库虽然很重要，但绝不是数据处理的终章。
 
-
-
 ## 本书涉及的领域
 
 本书并不会尝试告诉读者如何安装或使用特定的软件包或API，因为已经有大量文档给出了详细的使用说明。相反，我们会讨论数据系统的基石——各种原则与利弊权衡，并探讨了不同产品所做出的不同设计决策。
 
-在电子书中包含了在线资源全文的链接。所有链接在出版时都进行了验证，但不幸的是，由于网络的自然规律，链接往往会频繁地破损。如果您遇到链接断开的情况，或者正在阅读本书的打印副本，可以使用搜索引擎查找参考文献。对于学术论文，您可以在Google学术中搜索标题，查找可以公开获取的PDF文件。或者，您也可以在 https://github.com/ept/ddia-references 中找到所有的参考资料，我们在那儿维护最新的链接。
+在电子书中包含了在线资源全文的链接。所有链接在出版时都进行了验证，但不幸的是，由于网络的自然规律，链接往往会频繁地破损。如果您遇到链接断开的情况，或者正在阅读本书的打印副本，可以使用搜索引擎查找参考文献。对于学术论文，您可以在Google学术中搜索标题，查找可以公开获取的PDF文件。或者，您也可以在 [https://github.com/ept/ddia-references](https://github.com/ept/ddia-references) 中找到所有的参考资料，我们在那儿维护最新的链接。
 
 我们主要关注的是数据系统的**架构（architecture）**，以及它们被集成到数据密集型应用中的方式。本书没有足够的空间覆盖部署，运维，安全，管理等领域 —— 这些都是复杂而重要的主题，仅仅在本书中用粗略的注解讨论这些对它们很不公平。每个领域都值得用单独的书去讲。
 
@@ -62,30 +58,21 @@
 
 本书分为三部分：
 
-1. 在[第一部分](part-i.md)中，我们会讨论设计数据密集型应用所赖的基本思想。我们从[第1章](ch1.md)开始，讨论我们实际要达到的目标：可靠性，可扩展性和可维护性；我们该如何思考这些概念；以及如何实现它们。在[第2章](ch2.md)中，我们比较了几种不同的数据模型和查询语言，看看它们如何适用于不同的场景。在[第3章](ch3.md)中将讨论存储引擎：数据库如何在磁盘上摆放数据，以便能高效地再次找到它。[第4章](ch4.md)转向数据编码（序列化），以及随时间演化的模式。
-
-2. 在[第二部分](part-ii.md)中，我们从讨论存储在一台机器上的数据转向讨论分布在多台机器上的数据。这对于可扩展性通常是必需的，但带来了各种独特的挑战。我们首先讨论复制（[第5章](ch5.md)），分区/分片（[第6章](ch6.md)）和事务（[第7章](ch7.md)）。然后我们将探索关于分布式系统问题的更多细节（[第8章](ch8.md)），以及在分布式系统中实现一致性与共识意味着什么（[第9章](ch9.md)）。
-
-3. 在[第三部分](part-iii.md)中，我们讨论那些从其他数据集衍生出一些数据集的系统。衍生数据经常出现在异构系统中：当没有单个数据库可以把所有事情都做的很好时，应用需要集成几种不同的数据库，缓存，索引等。在[第10章](ch10.md)中我们将从一种衍生数据的批处理方法开始，然后在此基础上建立在[第11章](ch11.md)中讨论的流处理。最后，在[第12章](ch12.md)中，我们将所有内容汇总，讨论在将来构建可靠，可伸缩和可维护的应用程序的方法。
-
-
-
+1. 在[第一部分](part-i/)中，我们会讨论设计数据密集型应用所赖的基本思想。我们从[第1章](part-i/ch1.md)开始，讨论我们实际要达到的目标：可靠性，可扩展性和可维护性；我们该如何思考这些概念；以及如何实现它们。在[第2章](part-i/ch2.md)中，我们比较了几种不同的数据模型和查询语言，看看它们如何适用于不同的场景。在[第3章](part-i/ch3.md)中将讨论存储引擎：数据库如何在磁盘上摆放数据，以便能高效地再次找到它。[第4章](part-i/ch4.md)转向数据编码（序列化），以及随时间演化的模式。
+2. 在[第二部分](part-ii/)中，我们从讨论存储在一台机器上的数据转向讨论分布在多台机器上的数据。这对于可扩展性通常是必需的，但带来了各种独特的挑战。我们首先讨论复制（[第5章](part-ii/ch5.md)），分区/分片（[第6章](part-ii/ch6.md)）和事务（[第7章](part-ii/ch7.md)）。然后我们将探索关于分布式系统问题的更多细节（[第8章](part-ii/ch8.md)），以及在分布式系统中实现一致性与共识意味着什么（[第9章](part-ii/ch9.md)）。
+3. 在[第三部分](part-iii/)中，我们讨论那些从其他数据集衍生出一些数据集的系统。衍生数据经常出现在异构系统中：当没有单个数据库可以把所有事情都做的很好时，应用需要集成几种不同的数据库，缓存，索引等。在[第10章](part-iii/ch10.md)中我们将从一种衍生数据的批处理方法开始，然后在此基础上建立在[第11章](part-iii/ch11.md)中讨论的流处理。最后，在[第12章](part-iii/ch12.md)中，我们将所有内容汇总，讨论在将来构建可靠，可伸缩和可维护的应用程序的方法。
 
 ## 参考文献与延伸阅读
 
 本书中讨论的大部分内容已经在其它地方以某种形式出现过了 —— 会议演示文稿，研究论文，博客文章，代码，BUG跟踪器，邮件列表，以及工程习惯中。本书总结了不同来源资料中最重要的想法，并在文本中包含了指向原始文献的链接。 如果你想更深入地探索一个领域，那么每章末尾的参考文献都是很好的资源，其中大部分可以免费在线获取。
 
-
-
 ## O‘Reilly Safari
 
-[Safari](http://oreilly.com/safari) (formerly Safari Books Online) is a membership-based training and reference platform for enterprise, government, educators, and individuals.
+[Safari](http://oreilly.com/safari) \(formerly Safari Books Online\) is a membership-based training and reference platform for enterprise, government, educators, and individuals.
 
 Members have access to thousands of books, training videos, Learning Paths, interac‐ tive tutorials, and curated playlists from over 250 publishers, including O’Reilly Media, Harvard Business Review, Prentice Hall Professional, Addison-Wesley Pro‐ fessional, Microsoft Press, Sams, Que, Peachpit Press, Adobe, Focal Press, Cisco Press, John Wiley & Sons, Syngress, Morgan Kaufmann, IBM Redbooks, Packt, Adobe Press, FT Press, Apress, Manning, New Riders, McGraw-Hill, Jones & Bartlett, and Course Technology, among others.
 
-For more information, please visit http://oreilly.com/safari.
-
-
+For more information, please visit [http://oreilly.com/safari](http://oreilly.com/safari).
 
 ## 致谢
 
@@ -100,3 +87,4 @@ For more information, please visit http://oreilly.com/safari.
 特别感谢Shabbir Diwan和Edie Freedman，他们非常用心地为各章配了地图。他们提出了不落俗套的灵感，创作了这些地图，美丽而引人入胜，真是太棒了。
 
 最后我要表达对家人和朋友们的爱，没有他们，我将无法走完这个将近四年的写作历程。你们是最棒的。
+

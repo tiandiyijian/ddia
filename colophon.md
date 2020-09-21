@@ -8,17 +8,13 @@ Martin是一位常规会议演讲者，博主和开源贡献者。他认为，�
 
 ![](http://martin.kleppmann.com/2017/03/ddia-poster.jpg)
 
-
-
 ## 关于译者
 
 [冯若航](https://vonng.com/about)
 
 PostgreSQL DBA @ TanTan
 
-Alibaba+-Finplus 架构师/全栈工程师 (2015 ~ 2017)
-
-
+Alibaba+-Finplus 架构师/全栈工程师 \(2015 ~ 2017\)
 
 ## 后记
 
@@ -33,3 +29,4 @@ Alibaba+-Finplus 架构师/全栈工程师 (2015 ~ 2017)
 O'Reilly封面上的许多动物都受到威胁，这些动物对世界都很重要。要了解有关如何提供帮助的更多信息，请访问animals.oreilly.com。
 
 封面图片来自Shaw's Zoology。封面字体是URW Typewriter和Guardian Sans。文字字体是Adobe Minion Pro；图中的字体是Adobe Myriad Pro；标题字体是Adobe Myriad Condensed；代码字体是Dalton Maag的Ubuntu Mono。
+
